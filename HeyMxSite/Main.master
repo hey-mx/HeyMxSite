@@ -1,0 +1,145 @@
+<%@ Master Language="C#" Inherits="HeyMx.Site.Main" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head runat="server">
+	<title>
+		<asp:ContentPlaceHolder runat="server" id="titlePlaceHolder"></asp:ContentPlaceHolder>
+	</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="description" content="Hey-Mx Blog" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/nivo.css" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/skin.css" />	
+	<!--[if IE 6]><script src="javascript/pngfix.js"></script><script>DD_belatedPNG.fix('#logo img, #nav li a, #nav li a span, #nav-icons img, #twitter, #imac');</script><![endif]--> 			
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.js"></script>
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/font.font.js"></script>
+	<script type="text/javascript">
+	Cufon.replace('h1, h2', {hover:true});
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+		effect:'sliceDown',
+		slices:20,
+		animSpeed:500,
+		pauseTime:3000,
+		startSlide:0,
+		directionNav:false,
+		directionNavHide:false,
+		controlNav:false,
+		controlNavThumbs:false,
+		controlNavThumbsFromRel:false,
+		keyboardNav:false,
+		pauseOnHover:true,
+		manualAdvance:false,
+		captionOpacity:0.5,
+		beforeChange:function(){},
+		afterChange:function(){},
+		slideshowEnd:function(){}
+		});
+	});
+	</script>
+	<asp:ContentPlaceHolder runat="server" id="headerPlaceHoler">
+	</asp:ContentPlaceHolder>
+</head>
+<body id="hp"> <!-- APPLY CSS STYLES FOR HOMEPAGE -->
+<div id="main">
+	<form runat="server" id="mainForm">
+	<!-- HEADER -->
+	<div id="header" class="box">
+
+		<p id="logo"><a href="./" title="[Go to homepage]"><img src="design/logo.png" alt="" /></a></p>
+		<!-- INFO: Used font is named "BALLPARK", you can download it for free here: http://www.fontsquirrel.com/fonts/Ballpark -->
+
+		<!-- NAVIGATION -->
+		<ul id="nav">
+			<li class="current"><a href="#"><span>Inicio</span></a></li>
+			<li><a href="#"><span>Acerca de...</span></a></li>
+		</ul>		
+		
+		<!-- SOCIAL ICONS -->
+		<p id="nav-icons"><a href="#">
+		<img src="design/nav-rss.png" alt="" /></a><a href="#"><img src="design/nav-twitter.png" alt="" /></a></p>
+		
+	</div> <!-- /header -->
+
+	<!-- WELCOME -->
+	<div id="welcome" class="box">
+
+		<div id="welcome-inner">
+			<h2>Bienvenido</h2>
+			<p>Este es mi sitio personal...</p>
+		</div> 
+		<div id="imac">
+		
+			<!-- REPLACE THESE 3 IMAGES WITH YOUR OWN IMAGES (WIDTH:371, HEIGHT:211) -->
+			<div id="slider" class="nivoSlider">
+				<img src="images/slide-01.jpg" alt="" />
+				<img src="images/slide-02.jpg" alt="" />
+				<img src="images/slide-03.jpg" alt="" />
+			</div> <!-- /slider -->
+			
+		</div> <!-- /imac -->
+		
+	</div> <!-- /welcome -->
+	<!-- COLUMNS -->
+	<div id="section" class="box">
+
+		<!-- CONTENT -->
+		<div id="content">
+	    		<asp:ContentPlaceHolder id="contentPlaceHolder" runat="server">
+				</asp:ContentPlaceHolder>
+		</div> <!-- /content -->
+		<!-- SIDEBAR -->
+		<div id="aside">
+			<h2 class="nom">What is new?</h2>
+			<ul class="articles">
+				<li>
+					<h3><a href="#">Proudly presents new version</a></h3>
+					<p class="date">Monday, October 27</p>
+					<p>Lorem ipsum dolor sit amet, consecti adipiscing elit. Aliquam feugiat aliquet elit in comod. Etiam pharetra consectetur velit vel dignissim. Duisem purus augue, ullamcorper et ultrices quis.</p>
+				</li>
+				<li>
+					<h3><a href="#">New products announced</a></h3>
+					<p class="date">Saturday, October 16</p>
+					<p>Lorem ipsum dolor sit amet, consecti adipiscing elit. Aliquam feugiat aliquet elit in comod. Etiam pharetra consectetur velit vel dignissim. Duisem purus augue, ullamcorper et ultrices quis.</p>
+				</li>
+				<li class="last">
+					<h3><a href="#">Portfolio was updated today</a></h3>
+					<p class="date">Thursday, September 13</p>
+					<p>Lorem ipsum dolor sit amet, consecti adipiscing elit. Aliquam feugiat aliquet elit in comod. Etiam pharetra consectetur velit vel dignissim. Duisem purus augue, ullamcorper et ultrices quis.</p>
+				</li>
+			</ul>
+		
+		</div> <!-- /aside -->
+
+	</div> <!-- /section -->
+
+	<!-- CONTACT -->
+	<div id="contact">
+
+		<address>
+			Hey-Mx Blog <span>|</span>
+			<a href="#">hey-mx.org</a> <span>|</span>
+			<a href="mailto:carlos@hey-mx.org">carlos@hey-mx.org</a>
+		</address>		
+
+	</div> <!-- /contact -->	
+	
+	<!-- FOOTER -->
+	<div id="footer" class="box">
+
+		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
+		<p class="f-right t-right"><a href="http://www.templatesdock.com/">Free web templates</a> by TemplatesDock<br /><span class="smaller">Tip: <a href="http://www.nuvio.cz/">Webdesign</a></span></p>
+		<!-- Would you like to remove this line? Visit www.templatesdock.com/terms.php -->
+	
+		<p class="f-left">Copyright &copy;&nbsp;2011 <a href="#">Bestfolio</a>, All Rights Reserved &reg;</p>
+
+	</div> <!-- /footer -->
+	</form>
+</div> <!-- /main -->
+
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

@@ -4,7 +4,7 @@ using System.Web.UI;
 
 namespace HeyMx.Site
 {
-	public partial class Default : System.Web.UI.MasterPage
+	public partial class Main : System.Web.UI.MasterPage
 	{
 	}
 }

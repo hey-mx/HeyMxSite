@@ -13,10 +13,12 @@ namespace HeyMx.Site {
 	
 	public partial class Login {
 		
-		protected System.Web.UI.HtmlControls.HtmlForm form1;
+		protected System.Web.UI.WebControls.Content contentTitle;
+		
+		protected System.Web.UI.WebControls.Content contentHeader;
+		
+		protected System.Web.UI.WebControls.Content contentMain;
 		
 		protected System.Web.UI.WebControls.Login loginControl;
-		
-		protected System.Web.UI.WebControls.LoginStatus loginStatus1;
 	}
 }

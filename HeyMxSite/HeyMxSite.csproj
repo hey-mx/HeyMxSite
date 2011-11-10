@@ -50,6 +50,34 @@
     <Content Include="NuevoUsuario.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="Main.master" />
+    <Content Include="css\main.css" />
+    <Content Include="css\nivo.css" />
+    <Content Include="css\skin.css" />
+    <Content Include="js\cufon-yui.js" />
+    <Content Include="js\font.font.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.nivo.js" />
+    <Content Include="js\pngfix.js" />
+    <Content Include="images\product-01.jpg" />
+    <Content Include="images\product-02.jpg" />
+    <Content Include="images\product-03.jpg" />
+    <Content Include="images\slide-01.jpg" />
+    <Content Include="images\slide-02.jpg" />
+    <Content Include="images\slide-03.jpg" />
+    <Content Include="design\articles.png" />
+    <Content Include="design\bg.png" />
+    <Content Include="design\hp-section.png" />
+    <Content Include="design\imac.png" />
+    <Content Include="design\logo.png" />
+    <Content Include="design\nav-l.png" />
+    <Content Include="design\nav-r.png" />
+    <Content Include="design\nav-rss.png" />
+    <Content Include="design\nav-twitter.png" />
+    <Content Include="design\section.png" />
+    <Content Include="design\twitter.png" />
+    <Content Include="design\ul.gif" />
+    <Content Include="design\welcome.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -79,6 +107,12 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Main.master.designer.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -91,5 +125,10 @@
   </ProjectExtensions>
   <ItemGroup>
     <None Include="README" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="js\" />
+    <Folder Include="images\" />
   </ItemGroup>
 </Project>
